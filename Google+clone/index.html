@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in - Google Accounts</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f5f9fc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; 
+            margin: 0;
+            padding: 16px; 
+            box-sizing: border-box;
+        }
+        .input-field:focus {
+            outline: none;
+            border-color: #1a75ec; 
+            box-shadow: 0 0 0 1px #1a73e8;
+        }
+        .input-label {
+            position: absolute;
+            top: 14px;
+            left: 12px;
+            color: #6e8699; 
+            pointer-events: none;
+            transition: all 0.2s ease;
+        }
+        .input-field:focus + .input-label,
+        .input-field:not(:placeholder-shown) + .input-label {
+            top: 4px;
+            left: 8px;
+            font-size: 0.75rem;
+            color: #1a73e8; 
+            background-color: rgb(247, 237, 237);
+            padding: 0 4px;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <div class="flex flex-col md:flex-row bg-white rounded-lg shadow-lg overflow-hidden max-w-4xl w-full p-8 md:p-0">
+        
+        <div class="w-full md:w-1/2 p-6 md:p-12 flex flex-col justify-center">
+            <div class="text-center mb-8">
+                
+                <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo" class="h-8 mx-auto mb-4">
+                <h1 class="text-2xl font-normal text-gray-800 mb-2">Sign in</h1>
+                <p class="text-base text-gray-600">Use your Google Account</p>
+            </div>
+
+            <form class="space-y-6">
+                
+                <div class="relative">
+                    <input type="email" id="email" class="input-field w-full px-3 py-3 border border-gray-300 rounded-md focus:border-blue-500 focus:ring-1 focus:ring-blue-500 text-gray-900 placeholder-transparent" placeholder="Email or phone">
+                    <label for="email" class="input-label">Email or phone</label>
+                </div>
+
+               
+                <div class="text-blue-600 text-sm hover:underline cursor-pointer">
+                    <a href="#" class="text-blue-600 hover:underline">Forgot email?</a>
+                </div>
+
+               
+                <div class="text-gray-600 text-sm">
+                    Not your computer? Use Guest mode to sign in privately.
+                    <a href="#" class="text-blue-600 hover:underline">Learn more</a>
+                </div>
+
+                
+                <div class="flex flex-col sm:flex-row justify-between items-center pt-4">
+                    <a href="#" class="text-blue-600 font-medium hover:bg-blue-50 px-4 py-2 rounded-md transition duration-200 mb-4 sm:mb-0">Create account</a>
+                    <button type="submit" class="bg-blue-600 text-white font-medium py-2 px-6 rounded-md hover:bg-blue-700 transition duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">Next</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="hidden md:flex md:w-1/2 bg-white p-12 items-center justify-center">
+            <img src="https://ssl.gstatic.com/accounts/static/_/img/signin/undraw/undraw_security_re_5am3.svg" alt="Security Illustration" class="max-w-full h-auto">
+        </div>
+    </div>
+</body>
+</html>
